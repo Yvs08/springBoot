@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package yves;
 
 import org.springframework.data.annotation.Id;
@@ -14,85 +9,87 @@ public class DataSource {
     @Id
     private String id;
 
-    private String Description;
-    private String Code;	
-    private String Url;
-    private String Utilisateur;	
-    private String MotDePasse;
-    private String DriverJdbc;
+    private String description;
+    private String code;	
+    private String url;
+    private String utilisateur;	
+    private String motDePasse;
+    private String driverJdbc;
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCode() {
-        return Code;
+        return code;
     }
 
-    public void setCode(String Code) {
-        this.Code = Code;
-    }
-
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getUrl() {
-        return Url;
+        return url;
     }
 
-    public void setUtilisateur(String Utilisateur) {
-        this.Utilisateur = Utilisateur;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getUtilisateur() {
-        return Utilisateur;
+        return utilisateur;
     }
 
-    public void setMotDePasse(String MotDePasse) {
-        this.MotDePasse = MotDePasse;
+    public void setUtilisateur(String utilisateur) {
+        this.utilisateur = utilisateur;
     }
 
     public String getMotDePasse() {
-        return MotDePasse;
+        return motDePasse;
     }
 
-    public void setDriverJdbc(String DriverJdbc) {
-        this.DriverJdbc = DriverJdbc;
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
     }
 
     public String getDriverJdbc() {
-        return DriverJdbc;
-    }
-    
-   
-    public DataSource() 
-    {
-    
+        return driverJdbc;
     }
 
-    public DataSource(String Description, String Code, String Url, String Utilisateur, String MotDePasse, String DriverJdbc) 
-    {
-        this.Description = Description;
-        this.Code = Code;
-        this.Url = Url;
-	this.Utilisateur = Utilisateur;
-        this.MotDePasse = MotDePasse;
-	this.DriverJdbc = DriverJdbc;
+    public void setDriverJdbc(String driverJdbc) {
+        this.driverJdbc = driverJdbc;
     }
-
-   
 
     @Override
-    public String toString() 
-	{
-        return String.format(
-                "Datasource[id=%s, Description='%s', Code='%s', Url='%s', Utilisateur='%s', MotDePasse='%s', DriverJdbc='%s']",
-                id, Description, Code, Url, Utilisateur, MotDePasse, DriverJdbc);
+    public String toString() {
+        return "DataSource{" + "id=" + id + ", description=" + description + ", code=" + code + ", url=" + url + ", utilisateur=" + utilisateur + ", motDePasse=" + motDePasse + ", driverJdbc=" + driverJdbc + '}';
     }
 
+    
+
+    
+
+    
+
+   
+
+    
+
+    
+
+   
+
+    
 }

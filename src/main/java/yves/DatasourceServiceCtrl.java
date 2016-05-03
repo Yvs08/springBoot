@@ -5,6 +5,7 @@ package yves;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,9 +48,9 @@ public class DatasourceServiceCtrl {
      }
      
      @RequestMapping(value = "/adddatasource", method = RequestMethod.POST)
-    public String create (  String Description,  String Code,  String Url,  String Utilisateur,  String MotDePasse,  String DriverJdbc) {
-      DataSource datasource = new DataSource( Description, Code, Url, Utilisateur, MotDePasse , DriverJdbc );
-      DataSource  result = datasourceRepository.save(datasource);
+    public String create ( @RequestBody DataSource s ) {
+     // DataSource datasource = new DataSource( );
+      DataSource  result = datasourceRepository.save( s);
         
       if( result == null ){
          return FAILURE_RESULT; 
